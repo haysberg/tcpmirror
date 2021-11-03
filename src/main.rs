@@ -37,7 +37,7 @@ fn handle_client(stream: &mut TcpStream) {
     //that the request was done through an HTTP client.
     //We send an HTTP response instead of a raw TCP response.
     //If we don't it's recognized as HTTP 0.9 and gives us an error message in a lot of cases
-    if response.contains("HTTP"){
+    if response.contains("HTTP/"){
         print!("INFO : The request is an HTTP request. Sending an HTTP response...");
 
         //We format the response to be HTTP compliant.
