@@ -76,6 +76,7 @@ fn handle_client(stream: &mut TcpStream) {
 fn main() -> std::io::Result<()> {
     //We create a new port bind
     let listener = TcpListener::bind("127.0.0.1:8080")?;
+    println!("TCP Mirror server is up !");
 
     // accept connections and process them serially
     for stream in listener.incoming() {
