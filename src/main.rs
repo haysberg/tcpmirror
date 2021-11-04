@@ -64,6 +64,9 @@ fn handle_client(stream: &mut TcpStream) {
         }
     }
     
+    println!("================REQUEST================");
+    println!("{}", response);
+    println!("=======================================");
     //Another line of feedback
     println!("Done.");
 }
